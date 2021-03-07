@@ -23,7 +23,7 @@ def get_bitcoin_data():
 def get_data_from_posts(posts):
     for post in posts:
         text = post["text"]
-        attach = post["attachments"]
+        attach = post.get("attachments") if post.get("attachments") else []
         print(len(attach))
     pass
 
